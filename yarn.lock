@@ -82,11 +82,6 @@ destroy@~1.0.4:
   resolved "https://registry.yarnpkg.com/destroy/-/destroy-1.0.4.tgz#978857442c44749e4206613e37946205826abd80"
   integrity sha1-l4hXRCxEdJ5CBmE+N5RiBYJqvYA=
 
-device-detector-js@^2.2.9:
-  version "2.2.9"
-  resolved "https://registry.yarnpkg.com/device-detector-js/-/device-detector-js-2.2.9.tgz#e113eb465af1ef1deae3aea22c9ef9943931b5c8"
-  integrity sha512-nLXq2xP3kyu27I0F7gapQXKJuMCH8ebhK4MwptsRuYgtF5s6m21w6XJMDiuP4Bt+sg3VhkX1YBAxgZSARd7LSg==
-
 ee-first@1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/ee-first/-/ee-first-1.1.1.tgz#590c61156b0ae2f4f0255732a158b266bc56b21d"
