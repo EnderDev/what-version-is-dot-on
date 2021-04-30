@@ -1,10 +1,7 @@
 const express = require("express");
 const axios = require("axios");
-const DeviceDetector = require("device-detector-js");
 
 const app = express();
-
-const deviceDetector = new DeviceDetector();
 
 let cached = "";
 
