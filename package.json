@@ -5,6 +5,7 @@
   "license": "MIT",
   "dependencies": {
     "axios": "^0.21.1",
+    "device-detector-js": "^2.2.9",
     "express": "^4.17.1"
   }
 }
