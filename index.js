@@ -40,6 +40,6 @@ app.all("/badge", async (req, res) => {
     res.redirect(`https://img.shields.io/badge/version-${cached}-green&style=plastic`)
 })
 
-app.listen(3000 || process.env.PORT, () => {
-    console.log(`Started at http://localhost:${3000 || process.env.PORT}`)
+app.listen(process.env.PORT || 3000, () => {
+    console.log(`Started at http://localhost:${process.env.PORT || 3000}`)
 });
