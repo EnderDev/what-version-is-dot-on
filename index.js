@@ -6,7 +6,7 @@ const app = express();
 let cached = "";
 
 const invalidate = async (noChance) => {
-    if(!noChance && Math.random() > 0.3) return;
+    if(!noChance && Math.random() > 0.3 && cached.length !== 0) return;
 
     cached = await axios.get("https://raw.githubusercontent.com/dothq/browser-desktop/nightly/package.json")
         .then(res => res.data.versions["firefox-display"])
