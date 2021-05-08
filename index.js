@@ -5,15 +5,16 @@ const app = express();
 
 let cached = "";
 
-const invalidate = async (noChance) => {
-    cached = await axios.get("https://raw.githubusercontent.com/dothq/browser-desktop/nightly/package.json")
-        .then(res => res.data.versions["firefox-display"])
+const invalidate = async () => {
+    const { data } = await axios.get("https://raw.githubusercontent.com/dothq/browser-desktop/nightly/package.json")
+    
+    if(data.versions && data.versions["firefox-display"]) cached = data.versions["firefox-display"];
 }
 
 invalidate();
 
 app.all("/", async (req, res) => {
-    invalidate();
+    await invalidate();
 
     res.send(`
 <html>
@@ -33,7 +34,7 @@ app.all("/", async (req, res) => {
 })
 
 app.all("/badge", async (req, res) => {
-    invalidate();
+    await invalidate();
     
     res.redirect(`https://img.shields.io/badge/version-${cached}-green&style=plastic`)
 })
